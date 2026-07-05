@@ -292,7 +292,7 @@ class SoftSearchBar(QFrame):
 
 
 # ============================================================
-// Soft Sidebar - شريط جانبي ناعم (Organic UI)
+# Soft Sidebar - شريط جانبي ناعم (Organic UI)
 # ============================================================
 class SoftSidebar(QFrame):
     """شريط جانبي ناعم بتصميم Organic UI.
@@ -424,7 +424,7 @@ class SoftSidebar(QFrame):
 
 
 # ============================================================
-// Soft Chat Bubble - فقاعة محادثة (للـ AI Chat)
+# Soft Chat Bubble - فقاعة محادثة (للـ AI Chat)
 # ============================================================
 class ChatBubble(QFrame):
     """فقاعة محادثة ناعمة (للـ AI Chat UI).
