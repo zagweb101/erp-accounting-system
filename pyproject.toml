@@ -1,0 +1,102 @@
+[project]
+name = "erp-accounting"
+version = "2.0.0"
+description = "نظام ERP محاسبي متكامل يعتمد القيد المزدوج مع AI"
+authors = [
+    {name = "Your Company", email = "info@company.com"}
+]
+license = {text = "Proprietary"}
+requires-python = ">=3.11"
+readme = "README.md"
+
+dependencies = [
+    # Core
+    "python>=3.11",
+    # UI
+    "PySide6>=6.6.0",
+    "qdarktheme>=2.5.0",
+    "qtawesome>=1.3.0",
+    # Database
+    "SQLAlchemy>=2.0.0",
+    "alembic>=1.13.0",
+    # Security
+    "bcrypt>=4.0.0",
+    "cryptography>=42.0.0",
+    # PDF & Excel
+    "reportlab>=4.0.0",
+    "openpyxl>=3.1.0",
+    # Images
+    "Pillow>=10.0.0",
+    # Validation & Config
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    # Logging
+    "loguru>=0.7.0",
+    # AI (optional, for v1.5+)
+    # "openai>=1.0.0",  # Uncomment when AI module is enabled
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "pytest-qt>=4.2.0",
+    "pytest-benchmark>=4.0.0",
+    "pytest-asyncio>=0.23.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.7.0",
+    "bandit>=1.7.0",
+    "pre-commit>=3.5.0",
+    "mutmut>=3.0.0",
+]
+
+[project.scripts]
+erp-accounting = "erp_accounting.main:main"
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["erp_accounting"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-v --cov=erp_accounting --cov-report=term-missing --cov-report=html"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+source = ["erp_accounting"]
+omit = ["*/tests/*", "*/migrations/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "pass",
+]

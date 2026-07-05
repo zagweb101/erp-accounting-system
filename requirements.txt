@@ -1,0 +1,55 @@
+# ERP Accounting System v9.0 — Requirements
+# ============================================
+
+# Core UI
+PySide6>=6.6.0
+qdarktheme>=2.5.0
+qtawesome>=1.3.0
+
+# Database
+SQLAlchemy>=2.0.0
+alembic>=1.13.0
+
+# Security
+bcrypt>=4.0.0
+cryptography>=42.0.0
+
+# PDF & Excel
+reportlab>=4.0.0
+openpyxl>=3.1.0
+
+# Images
+Pillow>=10.0.0
+
+# Validation & Config
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Logging
+loguru>=0.7.0
+
+# AI (optional — install when API key is ready)
+# openai>=1.0.0
+
+# OCR (optional — requires Tesseract system package)
+# pytesseract>=0.3.10
+
+# Arabic text shaping
+arabic-reshaper>=3.0.0
+python-bidi>=0.4.2
+
+# Dev (testing & quality)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+pytest-qt>=4.2.0
+pytest-benchmark>=4.0.0
+pytest-asyncio>=0.23.0
+black>=23.0.0
+isort>=5.12.0
+flake8>=6.0.0
+mypy>=1.7.0
+bandit>=1.7.0
+
+# Build
+pyinstaller>=6.0.0
