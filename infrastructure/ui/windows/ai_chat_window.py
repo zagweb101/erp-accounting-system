@@ -23,7 +23,8 @@ from PySide6.QtWidgets import (
     QTextEdit, QPlainTextEdit, QApplication, QSpacerItem,
 )
 
-from infrastructure.ui.theme.soft_ui import SoftColors, add_soft_shadow
+from infrastructure.ui.theme.soft_ui import SoftColors
+from infrastructure.ui.widgets.soft_components import add_soft_shadow
 from infrastructure.ui.widgets.soft_components import (
     SoftCard, ChatBubble, SoftSearchBar,
 )
