@@ -86,11 +86,11 @@ class LoginWindow(QMainWindow):
         main_layout.setContentsMargins(0, 0, 0, 0)
         main_layout.setSpacing(0)
 
-        # Right side (RTL = first) — Branding
+        # Right side (RTL = first) - Branding
         branding = self._build_branding_panel()
         main_layout.addWidget(branding, 1)
 
-        # Left side — Login form
+        # Left side - Login form
         form_panel = self._build_form_panel()
         main_layout.addWidget(form_panel, 1)
 

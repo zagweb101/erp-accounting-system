@@ -29,7 +29,7 @@ class ReportRow:
 
 
 class SqlAlchemyReportRepository:
-    """مستودع التقارير — يُنفّذ استعلامات SQL المعقدة.
+    """مستودع التقارير - يُنفّذ استعلامات SQL المعقدة.
 
     كل الدوال تُعيد بيانات خام (dicts أو dataclasses)،
     الـ use cases تُنسّقها في تقارير نهائية.

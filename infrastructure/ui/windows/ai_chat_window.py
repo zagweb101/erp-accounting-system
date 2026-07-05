@@ -1,5 +1,5 @@
 """
-AI Chat Window — واجهة المحادثة مع المساعد الذكي
+AI Chat Window - واجهة المحادثة مع المساعد الذكي
 
 Design: Soft UI + Claymorphism + Organic UI
 Features:
@@ -33,7 +33,7 @@ from infrastructure.ui.windows._async_worker import AsyncWorker
 
 
 class ChatInputBar(QFrame):
-    """شريط إدخال المحادثة — ناعم بزاوية دائرية كبيرة."""
+    """شريط إدخال المحادثة - ناعم بزاوية دائرية كبيرة."""
 
     def __init__(self, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
@@ -358,7 +358,7 @@ class AIChatWindow(QWidget):
         self._add_typing_indicator()
 
         if self._ai_service is None:
-            # No AI service — show mock response
+            # No AI service - show mock response
             QTimer.singleShot(500, lambda: self._handle_no_ai(text))
             return
 

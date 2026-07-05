@@ -1,5 +1,5 @@
 """
-Service Integration Helper — يربط الخدمات المتقدمة بالـ UI
+Service Integration Helper - يربط الخدمات المتقدمة بالـ UI
 
 يوفر دوال سهلة للاستدعاء من أي شاشة:
 - export_to_excel()

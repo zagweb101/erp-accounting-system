@@ -1,4 +1,4 @@
-"""SQLAlchemy AuditLog model — سجل النشاط.
+"""SQLAlchemy AuditLog model - سجل النشاط.
 
 ⚠️ Critical for security: append-only log of every sensitive operation.
 """
@@ -14,7 +14,7 @@ from infrastructure.db.session import Base
 
 
 class AuditLogModel(Base):
-    """سجل النشاط — يحوي كل عملية حساسة في النظام.
+    """سجل النشاط - يحوي كل عملية حساسة في النظام.
 
     Append-only: لا يمكن تعديل أو حذف (تطبيقيًا عبر الـ application logic).
     """

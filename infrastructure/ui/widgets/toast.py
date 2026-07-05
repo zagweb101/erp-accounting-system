@@ -1,5 +1,5 @@
 """
-Toast Notification System — نظام الإشعارات المنبثقة
+Toast Notification System - نظام الإشعارات المنبثقة
 
 يعرض إشعارات ناعمة (Soft UI) تختفي تلقائيًا.
 

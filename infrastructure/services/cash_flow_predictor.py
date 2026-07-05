@@ -1,5 +1,5 @@
 """
-Cash Flow Prediction Service — خدمة التنبؤ بالتدفقات النقدية
+Cash Flow Prediction Service - خدمة التنبؤ بالتدفقات النقدية
 
 يحلّل بيانات الفواتير التاريخية ويتنبأ بالتدفقات النقدية المستقبلية.
 
@@ -9,7 +9,7 @@ Methods:
 - Seasonal naive (last year same period)
 - ARIMA-like (simplified)
 
-No external ML libraries required — pure Python implementation.
+No external ML libraries required - pure Python implementation.
 """
 from __future__ import annotations
 
@@ -37,7 +37,7 @@ class CashFlowPrediction:
 class CashFlowPredictor:
     """التنبؤ بالتدفقات النقدية باستخدام methods إحصائية بسيطة.
 
-    No sklearn/statsmodels required — pure Python.
+    No sklearn/statsmodels required - pure Python.
     """
 
     def __init__(self, min_history_days: int = 30) -> None:

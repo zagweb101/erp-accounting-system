@@ -1,5 +1,5 @@
 """
-Advanced OCR Service — خدمة OCR متقدمة
+Advanced OCR Service - خدمة OCR متقدمة
 
 Features:
 - Image preprocessing (denoise, deskew, threshold)

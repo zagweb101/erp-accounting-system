@@ -20,7 +20,7 @@ from infrastructure.db.session import session_scope
 class AuditService:
     """خدمة تسجيل العمليات الحساسة في سجل النشاط.
 
-    Append-only: لا توجد دالة update أو delete — فقط record().
+    Append-only: لا توجد دالة update أو delete - فقط record().
     """
 
     def record(
@@ -36,7 +36,7 @@ class AuditService:
     ) -> AuditLogModel:
         """تسجيل عملية في سجل النشاط.
 
-        ⚠️ هذه الدالة لا ترمي استثناء عند الفشل — سجل النشاط لا يجب أن
+        ⚠️ هذه الدالة لا ترمي استثناء عند الفشل - سجل النشاط لا يجب أن
         يوقف العمليات التجارية. الأخطاء تُسجّل في log فقط.
         """
         try:
@@ -59,7 +59,7 @@ class AuditService:
                 s.expunge(log)
                 return log
         except Exception as e:
-            # Don't fail the operation if audit fails — but log the error
+            # Don't fail the operation if audit fails - but log the error
             # In production: use logger.error() here
             print(f"⚠️ AUDIT LOG FAILED: {e}")
             return None  # type: ignore

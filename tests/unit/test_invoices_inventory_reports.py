@@ -283,7 +283,7 @@ class TestInvoiceCreation:
             CreateProductRequest(sku="INV-PROD-002", name="Product 2"),
             admin_user,
         )
-        # No stock added — should fail
+        # No stock added - should fail
 
         journal_builder = AutoJournalBuilder(repos["account"])
         create_journal_uc = CreateJournalEntryUseCase(repos["journal"], repos["account"])

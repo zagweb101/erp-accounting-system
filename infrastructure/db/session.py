@@ -24,7 +24,7 @@ Base = declarative_base()
 def get_engine() -> Engine:
     """الحصول على محرك قاعدة البيانات (singleton).
 
-    يقرأ الإعدادات من get_settings() في كل مرة (لا cache) — يسمح بتغيير
+    يقرأ الإعدادات من get_settings() في كل مرة (لا cache) - يسمح بتغيير
     DATABASE_URL أثناء الاختبارات.
     """
     global _engine

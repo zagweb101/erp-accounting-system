@@ -63,7 +63,7 @@ def accountant_user(repo, admin_user):
         ),
         current_user=admin_user,
     )
-    # Execute is async — use asyncio
+    # Execute is async - use asyncio
     import asyncio
     return asyncio.get_event_loop().run_until_complete(user)
 

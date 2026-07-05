@@ -90,7 +90,7 @@ class MockLLMProvider(LLMProvider):
     """Mock LLM for testing (no real AI)."""
 
     def generate(self, prompt: str, functions: list[dict] = None) -> dict:
-        """محاكاة بسيطة للـ LLM — تتعرف على أنماط نصية محددة."""
+        """محاكاة بسيطة للـ LLM - تتعرف على أنماط نصية محددة."""
         prompt_lower = prompt.lower()
 
         # Pattern: create invoice
@@ -338,7 +338,7 @@ class AIAgentService:
     def _create_sales_invoice(
         self, customer: str, items: list, current_user=None, **kwargs
     ) -> str:
-        """إنشاء فاتورة بيع (محاكاة — يحتاج wiring كامل في الإنتاج)."""
+        """إنشاء فاتورة بيع (محاكاة - يحتاج wiring كامل في الإنتاج)."""
         total = sum(it.get("price", 0) * it.get("quantity", 1) for it in items)
         return f"تم إنشاء فاتورة بيع للعميل '{customer}' بقيمة {total:,.2f} ر.س (محاكاة)"
 
@@ -348,7 +348,7 @@ class AIAgentService:
 
 
 # ============================================================
-# AI Audit Logger — يسجل كل تفاعلات الـ AI
+# AI Audit Logger - يسجل كل تفاعلات الـ AI
 # ============================================================
 class AIAuditLogger:
     """يسجل كل تفاعلات الـ AI للمراجعة الأمنية."""

@@ -101,7 +101,7 @@ class ProductFormDialog(QDialog):
         form.addRow("الوصف:", self.description_input)
 
         # Profit margin label (auto-calculated)
-        self.margin_label = QLabel("—")
+        self.margin_label = QLabel("-")
         self.margin_label.setStyleSheet("color: #68D391; font-weight: bold;")
         form.addRow("هامش الربح:", self.margin_label)
 
@@ -144,7 +144,7 @@ class ProductFormDialog(QDialog):
             color = "#68D391" if margin >= 0 else "#FC8181"
             self.margin_label.setStyleSheet(f"color: {color}; font-weight: bold;")
         else:
-            self.margin_label.setText("—")
+            self.margin_label.setText("-")
 
     def _fill_form(self, data: dict) -> None:
         self.sku_input.setText(data.get("sku", ""))
@@ -426,7 +426,7 @@ class ProductsWindow(QWidget):
             self.table.setItem(i, 3, QTableWidgetItem(f"{p.cost_price:,.2f}"))
             self.table.setItem(i, 4, QTableWidgetItem(f"{p.sale_price:,.2f}"))
             self.table.setItem(i, 5, QTableWidgetItem(f"{float(p.profit_margin()):.1f}%"))
-            self.table.setItem(i, 6, QTableWidgetItem("—"))  # No balance loaded
+            self.table.setItem(i, 6, QTableWidgetItem("-"))  # No balance loaded
             self.table.setItem(i, 7, QTableWidgetItem("✓ نشط" if p.is_active else "✗ معطّل"))
 
     def _on_row_double_clicked(self, index) -> None:

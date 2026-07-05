@@ -333,7 +333,7 @@ class CustomersWindow(QWidget):
             balance_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self.table.setItem(i, 4, balance_item)
             limit_item = QTableWidgetItem(
-                f"{c.credit_limit:,.2f}" if c.credit_limit > 0 else "—"
+                f"{c.credit_limit:,.2f}" if c.credit_limit > 0 else "-"
             )
             limit_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self.table.setItem(i, 5, limit_item)
@@ -534,7 +534,7 @@ class CustomersWindow(QWidget):
             from infrastructure.ui.services.ui_service_integration import import_from_excel
             data = import_from_excel("customers", parent=self)
             if data:
-                self.status_label.setText(f"✓ تم استيراد {len(data)} عميل — استخدمهم لإنشاء العملاء")
+                self.status_label.setText(f"✓ تم استيراد {len(data)} عميل - استخدمهم لإنشاء العملاء")
         except Exception as e:
             self._on_error(str(e))
 

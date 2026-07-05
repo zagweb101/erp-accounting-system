@@ -64,7 +64,7 @@ def run_app() -> int:
     # Initialize DB if needed
     init_database()
 
-    # Try to seed (idempotent — only creates if missing)
+    # Try to seed (idempotent - only creates if missing)
     try:
         run_seed()
     except Exception as e:
@@ -93,7 +93,7 @@ def run_app() -> int:
     except Exception as e:
         logger.info(f"Soft UI theme not available: {e}, using default")
 
-    # Wire up dependencies (manual DI — could use a container later)
+    # Wire up dependencies (manual DI - could use a container later)
     user_repo = SqlAlchemyUserRepository()
     login_use_case = LoginUseCase(user_repo=user_repo)
 

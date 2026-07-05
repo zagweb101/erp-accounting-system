@@ -1,5 +1,5 @@
 """
-Soft UI Components — مكونات UI ناعمة مخصصة
+Soft UI Components - مكونات UI ناعمة مخصصة
 
 Claymorphism + Soft UI + Organic UI widgets.
 """
@@ -19,7 +19,7 @@ from infrastructure.ui.theme.soft_ui import SoftColors
 
 
 # ============================================================
-# Soft Shadow Effect — تأثير الظل الناعم
+# Soft Shadow Effect - تأثير الظل الناعم
 # ============================================================
 def add_soft_shadow(
     widget: QWidget,
@@ -52,7 +52,7 @@ def add_soft_shadow(
 
 
 # ============================================================
-# Soft Card — بطاقة ناعمة (Claymorphism)
+# Soft Card - بطاقة ناعمة (Claymorphism)
 # ============================================================
 class SoftCard(QFrame):
     """بطاقة ناعمة بظل منتفخ (Claymorphism style).
@@ -114,7 +114,7 @@ class SoftCard(QFrame):
 
 
 # ============================================================
-# Gradient Card — بطاقة بتدرج لوني (Organic UI)
+# Gradient Card - بطاقة بتدرج لوني (Organic UI)
 # ============================================================
 class GradientCard(QFrame):
     """بطاقة بتدرج لوني عضوي.
@@ -176,10 +176,10 @@ class GradientCard(QFrame):
 
 
 # ============================================================
-# KPI Card — بطاقة مؤشر أداء
+# KPI Card - بطاقة مؤشر أداء
 # ============================================================
 class KPICard(SoftCard):
-    """بطاقة KPI ناعمة — تعرض قيمة + تسمية + تغيير%.
+    """بطاقة KPI ناعمة - تعرض قيمة + تسمية + تغيير%.
 
     Features:
     - قيمة كبيرة (28px)
@@ -233,7 +233,7 @@ class KPICard(SoftCard):
 
 
 # ============================================================
-# Soft Search Bar — شريط بحث ناعم
+# Soft Search Bar - شريط بحث ناعم
 # ============================================================
 class SoftSearchBar(QFrame):
     """شريط بحث ناعم بزاوية دائرية وأيقونة."""
@@ -292,7 +292,7 @@ class SoftSearchBar(QFrame):
 
 
 # ============================================================
-// Soft Sidebar — شريط جانبي ناعم (Organic UI)
+// Soft Sidebar - شريط جانبي ناعم (Organic UI)
 # ============================================================
 class SoftSidebar(QFrame):
     """شريط جانبي ناعم بتصميم Organic UI.
@@ -424,7 +424,7 @@ class SoftSidebar(QFrame):
 
 
 # ============================================================
-// Soft Chat Bubble — فقاعة محادثة (للـ AI Chat)
+// Soft Chat Bubble - فقاعة محادثة (للـ AI Chat)
 # ============================================================
 class ChatBubble(QFrame):
     """فقاعة محادثة ناعمة (للـ AI Chat UI).

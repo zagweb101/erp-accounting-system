@@ -148,7 +148,7 @@ class TestAIAgentService:
         )
         response = ai_service.process_request(request, accountant_user)
         # Mock might return report function_call or just text
-        # Either is acceptable — verify no error
+        # Either is acceptable - verify no error
         assert response.error is None
         assert response.text != ""
 
@@ -242,7 +242,7 @@ class TestAIAgentService:
             username=disabled_user.username,
         )
         response = ai_service.process_request(request, disabled_user)
-        # Disabled user has no permissions — should be denied for actions
+        # Disabled user has no permissions - should be denied for actions
         # that require permissions (create_sales_invoice requires INVOICE_CREATE)
         assert (
             "صلاحية" in response.text

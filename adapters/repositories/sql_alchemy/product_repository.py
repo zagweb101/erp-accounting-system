@@ -194,7 +194,7 @@ class SqlAlchemyInventoryRepository(IInventoryRepository):
             return [self._to_entity(m) for m in models]
 
     async def get_low_stock_products(self) -> list[tuple]:
-        """المنتجات تحت الحد الأدنى — يُعيد [(product, current_balance), ...]
+        """المنتجات تحت الحد الأدنى - يُعيد [(product, current_balance), ...]
 
         Product is returned as ProductModel (ORM) for performance.
         Caller should convert to entity if needed.

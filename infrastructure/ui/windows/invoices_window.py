@@ -170,7 +170,7 @@ class InvoiceLineEditor(QGroupBox):
                 line_total = subtotal + tax
                 self.table.item(row, 5).setText(f"{line_total:.2f}")
             except Exception as e:
-                # Silent fail — UI initialization should not crash
+                # Silent fail - UI initialization should not crash
                 # In production: use logger.warning(f"UI init error: {e}")
                 pass
             self._update_totals()
@@ -538,7 +538,7 @@ class InvoicesWindow(QWidget):
             type_text = "بيع" if inv.is_sale else ("شراء" if inv.is_purchase else "مرتجع")
             self.table.setItem(i, 1, QTableWidgetItem(type_text))
             # Will load party name async if needed
-            self.table.setItem(i, 2, QTableWidgetItem("—"))
+            self.table.setItem(i, 2, QTableWidgetItem("-"))
             self.table.setItem(i, 3, QTableWidgetItem(inv.issue_date.strftime("%Y-%m-%d")))
             sub_item = QTableWidgetItem(f"{inv.subtotal:,.2f}")
             sub_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
@@ -666,7 +666,7 @@ class InvoicesWindow(QWidget):
                 QMessageBox.warning(self, "تنبيه", "الفاتورة غير موجودة")
                 return
             # Load party name
-            party_name = "—"
+            party_name = "-"
             # Build info message
             msg = (
                 f"رقم الفاتورة: {invoice.invoice_no}\n"
@@ -676,7 +676,7 @@ class InvoicesWindow(QWidget):
                 f"البنود:\n"
             )
             for i, item in enumerate(invoice.items, 1):
-                msg += f"  {i}. {item.description} — {item.quantity} × {item.unit_price} = {item.line_total:.2f}\n"
+                msg += f"  {i}. {item.description} - {item.quantity} × {item.unit_price} = {item.line_total:.2f}\n"
             msg += (
                 f"\nالإجمالي الفرعي: {invoice.subtotal:,.2f}\n"
                 f"الضريبة: {invoice.tax_amount:,.2f}\n"
@@ -703,7 +703,7 @@ class InvoicesWindow(QWidget):
             if invoice is None:
                 return None
             # Load party name
-            party_name = "—"
+            party_name = "-"
             if invoice.customer_id:
                 customer = await self._customer_repo.get_by_id(invoice.customer_id)
                 if customer:
@@ -718,7 +718,7 @@ class InvoicesWindow(QWidget):
             for item in invoice.items:
                 product = await self._product_repo.get_by_id(item.product_id)
                 items_data.append({
-                    "product_name": product.name if product else "—",
+                    "product_name": product.name if product else "-",
                     "quantity": str(item.quantity),
                     "unit_price": float(item.unit_price),
                     "tax_rate": float(item.tax_rate),

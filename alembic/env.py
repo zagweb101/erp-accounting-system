@@ -1,5 +1,5 @@
 """
-Alembic environment — إعداد بيئة migrations
+Alembic environment - إعداد بيئة migrations
 """
 from __future__ import annotations
 

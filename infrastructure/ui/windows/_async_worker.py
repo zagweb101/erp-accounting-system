@@ -33,6 +33,6 @@ class AsyncWorker(QThread):
             try:
                 loop.close()
             except Exception as e:
-                # Silent fail — UI initialization should not crash
+                # Silent fail - UI initialization should not crash
                 # In production: use logger.warning(f"UI init error: {e}")
                 pass

@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Optional
 from uuid import UUID
 
-# Try imports — degrade gracefully if libs missing
+# Try imports - degrade gracefully if libs missing
 try:
     from reportlab.lib import colors
     from reportlab.lib.pagesizes import A4, letter

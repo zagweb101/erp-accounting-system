@@ -1,5 +1,5 @@
 """
-Soft UI Design System — نظام التصميم الناعم
+Soft UI Design System - نظام التصميم الناعم
 
 يجمع ثلاثة أنماط:
 - Claymorphism: عناصر طينية بظلال منتفخة
@@ -18,10 +18,10 @@ from PySide6.QtWidgets import QApplication
 
 
 # ============================================================
-# Color Palette — ألوان ناعمة (Soft Palette)
+# Color Palette - ألوان ناعمة (Soft Palette)
 # ============================================================
 class SoftColors:
-    """لوحة ألوان Soft UI — ألوان هادئة، ماضيلية، طبيعية."""
+    """لوحة ألوان Soft UI - ألوان هادئة، ماضيلية، طبيعية."""
 
     # Base backgrounds (very soft, near-white with tint)
     BG_PRIMARY = "#F0F4F8"
@@ -371,7 +371,7 @@ class SoftUIStyleSheet:
 # Soft UI Theme Manager
 # ============================================================
 class SoftUITheme:
-    """مدير ثيم Soft UI — يطبّق الثيم على التطبيق بالكامل."""
+    """مدير ثيم Soft UI - يطبّق الثيم على التطبيق بالكامل."""
 
     @staticmethod
     def apply(app: QApplication, mode: str = "light") -> None:

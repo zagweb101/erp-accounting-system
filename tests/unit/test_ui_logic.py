@@ -1,5 +1,5 @@
 """
-اختبارات UI logic — محاكاة بدون واجهة فعلية
+اختبارات UI logic - محاكاة بدون واجهة فعلية
 
 تختبر منطق الـ UI windows (دوال، تحقق، تحويلات) دون الحاجة لـ pytest-qt.
 """
@@ -48,7 +48,7 @@ def admin_user():
 class TestAsyncWorker:
     pytestmark = pytest.mark.skipif(not PYSIDE6_AVAILABLE, reason="PySide6 not installed")
 
-    """اختبارات AsyncWorker — منطق الـ async threads."""
+    """اختبارات AsyncWorker - منطق الـ async threads."""
 
     def test_async_worker_executes_coroutine(self) -> None:
         """AsyncWorker يُنفّذ coroutine بنجاح."""
@@ -71,7 +71,7 @@ class TestAsyncWorker:
         async def failing_coro():
             raise ValueError("test error")
 
-        # The worker should not raise — it captures errors in error_signal
+        # The worker should not raise - it captures errors in error_signal
         worker = AsyncWorker(failing_coro)
         # Just verify it was created
         assert worker is not None
@@ -297,7 +297,7 @@ class TestAuditServiceLogic:
             description="test description",
         )
         # Either succeeds (returns log) or silently fails (returns None)
-        # Both are acceptable — audit should never crash the operation
+        # Both are acceptable - audit should never crash the operation
         assert log is None or log.action == "TEST_ACTION"
 
     def test_list_logs_returns_list(self) -> None:

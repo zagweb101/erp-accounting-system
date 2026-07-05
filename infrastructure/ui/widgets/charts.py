@@ -1,5 +1,5 @@
 """
-Charts Widget — رسوم بيانية ناعمة باستخدام QPainter
+Charts Widget - رسوم بيانية ناعمة باستخدام QPainter
 
 يوفّر:
 - BarChart: رسم بياني أعمدة

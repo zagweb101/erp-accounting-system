@@ -1,5 +1,5 @@
 """
-Loading Spinner Helper — مساعد حالة التحميل
+Loading Spinner Helper - مساعد حالة التحميل
 
 يوفّر مؤشرات تحميل للعمليات الطويلة في الواجهة.
 """
@@ -19,7 +19,7 @@ except ImportError:
 
 
 class LoadingOverlay(QDialog):
-    """نافذة تحميل عائمة — تُعرض أثناء العمليات الطويلة.
+    """نافذة تحميل عائمة - تُعرض أثناء العمليات الطويلة.
 
     Usage:
         overlay = LoadingOverlay("جارٍ حفظ الفاتورة...", parent=self)

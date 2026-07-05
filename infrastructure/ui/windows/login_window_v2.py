@@ -1,5 +1,5 @@
 """
-Login Window v2 — Soft UI Design
+Login Window v2 - Soft UI Design
 
 Claymorphism + Soft UI + Organic UI
 """
@@ -73,11 +73,11 @@ class LoginWindow(QMainWindow):
         main_layout.setContentsMargins(0, 0, 0, 0)
         main_layout.setSpacing(0)
 
-        # Right side (RTL) — Branding with gradient
+        # Right side (RTL) - Branding with gradient
         branding = self._build_branding_panel()
         main_layout.addWidget(branding, 1)
 
-        # Left side — Login form with Soft UI
+        # Left side - Login form with Soft UI
         form_panel = self._build_form_panel()
         main_layout.addWidget(form_panel, 1)
 
@@ -227,7 +227,7 @@ class LoginWindow(QMainWindow):
 
         layout.addSpacing(10)
 
-        # Login button (primary — soft blue)
+        # Login button (primary - soft blue)
         self.login_button = QPushButton("تسجيل الدخول")
         self.login_button.setObjectName("primary")
         self.login_button.setMinimumHeight(52)

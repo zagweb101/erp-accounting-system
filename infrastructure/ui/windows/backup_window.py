@@ -181,15 +181,15 @@ class BackupWindow(QWidget):
             backups = self._backup_service.list_backups()
             self.table.setRowCount(len(backups))
             for i, b in enumerate(backups):
-                self.table.setItem(i, 0, QTableWidgetItem(b.get("file_name", "—")))
+                self.table.setItem(i, 0, QTableWidgetItem(b.get("file_name", "-")))
                 ts = b.get("backup_timestamp", "")
                 self.table.setItem(i, 1, QTableWidgetItem(ts))
-                self.table.setItem(i, 2, QTableWidgetItem(b.get("created_by", "—")))
+                self.table.setItem(i, 2, QTableWidgetItem(b.get("created_by", "-")))
                 size_kb = b.get("file_size", 0) // 1024
                 size_item = QTableWidgetItem(f"{size_kb} KB")
                 size_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
                 self.table.setItem(i, 3, size_item)
-                self.table.setItem(i, 4, QTableWidgetItem(b.get("description", "—")))
+                self.table.setItem(i, 4, QTableWidgetItem(b.get("description", "-")))
             self.status_label.setText(f"إجمالي النسخ: {len(backups)}")
         except Exception as e:
             self.status_label.setText(f"⚠ خطأ: {e}")

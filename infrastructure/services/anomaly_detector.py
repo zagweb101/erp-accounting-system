@@ -1,5 +1,5 @@
 """
-Anomaly Detection Service — خدمة كشف الحالات الشاذة
+Anomaly Detection Service - خدمة كشف الحالات الشاذة
 
 تراقب العمليات المالية وتكتشف الأنماط غير المعتادة:
 - فواتير بحجم غير عادي
@@ -8,7 +8,7 @@ Anomaly Detection Service — خدمة كشف الحالات الشاذة
 - تجاوز حدود الائتمان
 - تكرار عمليات مشبوهة
 
-No ML libraries — pure statistical heuristics.
+No ML libraries - pure statistical heuristics.
 """
 from __future__ import annotations
 

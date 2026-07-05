@@ -1,5 +1,5 @@
 """
-Soft UI Theme Helper — يطبّق Soft UI على الشاشات الموجودة
+Soft UI Theme Helper - يطبّق Soft UI على الشاشات الموجودة
 
 بدلًا من إعادة كتابة كل شاشة، نُطبّق الأنماط عبر هذا الـ helper.
 """

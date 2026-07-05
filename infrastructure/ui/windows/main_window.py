@@ -42,7 +42,7 @@ class SidebarButton(QPushButton):
                 self.setIcon(qta.icon(f"fa5s.{icon_name}", color="#94A3B8"))
                 self.setIconSize(QSize(20, 20))
             except Exception as e:
-                # Silent fail — UI initialization should not crash
+                # Silent fail - UI initialization should not crash
                 # In production: use logger.warning(f"UI init error: {e}")
                 pass
 
@@ -74,7 +74,7 @@ class SidebarButton(QPushButton):
                 color = "white" if active else "#94A3B8"
                 self.setIcon(qta.icon(f"fa5s.{self._icon_name}", color=color))
             except Exception as e:
-                # Silent fail — UI initialization should not crash
+                # Silent fail - UI initialization should not crash
                 # In production: use logger.warning(f"UI init error: {e}")
                 pass
 
@@ -212,7 +212,7 @@ class MainWindow(QMainWindow):
             try:
                 logout_btn.setIcon(qta.icon("fa5s.sign-out-alt", color="#EF4444"))
             except Exception as e:
-                # Silent fail — UI initialization should not crash
+                # Silent fail - UI initialization should not crash
                 # In production: use logger.warning(f"UI init error: {e}")
                 pass
         logout_btn.clicked.connect(self._on_logout)
@@ -261,7 +261,7 @@ class MainWindow(QMainWindow):
             "journal": SqlAlchemyJournalEntryRepository(),
         }
 
-        # Page 0: Dashboard (NEW — real KPI cards)
+        # Page 0: Dashboard (NEW - real KPI cards)
         try:
             from infrastructure.ui.windows.dashboard_page import DashboardPage
             dashboard_page = DashboardPage(
@@ -513,7 +513,7 @@ class MainWindow(QMainWindow):
                 notif_btn.setIcon(qta.icon("fa5s.bell", color="#475569"))
                 notif_btn.setIconSize(QSize(20, 20))
             except Exception as e:
-                # Silent fail — UI initialization should not crash
+                # Silent fail - UI initialization should not crash
                 # In production: use logger.warning(f"UI init error: {e}")
                 pass
         top_bar.addWidget(notif_btn)
@@ -544,7 +544,7 @@ class MainWindow(QMainWindow):
             try:
                 qdarktheme.setup_theme("light")
             except Exception as e:
-                # Silent fail — UI initialization should not crash
+                # Silent fail - UI initialization should not crash
                 # In production: use logger.warning(f"UI init error: {e}")
                 pass
 

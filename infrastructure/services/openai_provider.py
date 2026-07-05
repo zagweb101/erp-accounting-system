@@ -1,5 +1,5 @@
 """
-OpenAI LLM Provider — موفّر OpenAI للمساعد الذكي
+OpenAI LLM Provider - موفّر OpenAI للمساعد الذكي
 
 جاهز للاستخدام عند توفير مفتاح API.
 يدعم:
@@ -51,7 +51,7 @@ class OpenAIProvider(LLMProvider):
         self._max_tokens = max_tokens
         self._client = None
 
-        # System prompt — يُعرّف الـ AI كمساعد محاسبي عربي
+        # System prompt - يُعرّف الـ AI كمساعد محاسبي عربي
         self._system_prompt = (
             "أنت مساعد محاسبي ذكي لنظام ERP محاسبي. "
             "تجيب باللغة العربية. دورك:\n"
@@ -62,7 +62,7 @@ class OpenAIProvider(LLMProvider):
             "قواعد:\n"
             "- استخدم Function Calling لتنفيذ الإجراءات\n"
             "- اطلب تأكيد المستخدم قبل العمليات الحساسة\n"
-            "- لا ت invent أرقامًا — استعلم من النظام\n"
+            "- لا ت invent أرقامًا - استعلم من النظام\n"
             "- كن مختصرًا وواضحًا"
         )
 

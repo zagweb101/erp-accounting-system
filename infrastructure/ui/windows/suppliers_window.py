@@ -308,7 +308,7 @@ class SuppliersWindow(QWidget):
             balance_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self.table.setItem(i, 4, balance_item)
             limit_item = QTableWidgetItem(
-                f"{s.credit_limit:,.2f}" if s.credit_limit > 0 else "—"
+                f"{s.credit_limit:,.2f}" if s.credit_limit > 0 else "-"
             )
             limit_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self.table.setItem(i, 5, limit_item)

@@ -242,10 +242,10 @@ class ReportsWindow(QWidget):
                 "REVENUE": "إيرادات", "EXPENSE": "مصروفات",
             }.get(line.account_type, line.account_type)
             self.results_table.setItem(i, 2, QTableWidgetItem(type_ar))
-            dr_item = QTableWidgetItem(f"{line.debit:,.2f}" if line.debit > 0 else "—")
+            dr_item = QTableWidgetItem(f"{line.debit:,.2f}" if line.debit > 0 else "-")
             dr_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self.results_table.setItem(i, 3, dr_item)
-            cr_item = QTableWidgetItem(f"{line.credit:,.2f}" if line.credit > 0 else "—")
+            cr_item = QTableWidgetItem(f"{line.credit:,.2f}" if line.credit > 0 else "-")
             cr_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
             self.results_table.setItem(i, 4, cr_item)
 
@@ -264,7 +264,7 @@ class ReportsWindow(QWidget):
 
         status = "✓ متوازن" if report.is_balanced else "✗ غير متوازن"
         self.status_label.setText(
-            f"ميزان المراجعة كما في {report.as_of_date.strftime('%Y-%m-%d')} — {status} "
+            f"ميزان المراجعة كما في {report.as_of_date.strftime('%Y-%m-%d')} - {status} "
             f"(مدين: {report.total_debit:,.2f} | دائن: {report.total_credit:,.2f})"
         )
 
@@ -348,7 +348,7 @@ class ReportsWindow(QWidget):
 
         status = "✓ متوازن" if report.is_balanced else "⚠ قبل الإقفال"
         self.status_label.setText(
-            f"قائمة المركز المالي كما في {report.as_of_date.strftime('%Y-%m-%d')} — {status} "
+            f"قائمة المركز المالي كما في {report.as_of_date.strftime('%Y-%m-%d')} - {status} "
             f"(أصول: {report.total_assets:,.2f} | خصوم: {report.total_liabilities:,.2f} | "
             f"حقوق ملكية: {report.total_equity:,.2f})"
         )
@@ -466,7 +466,7 @@ class ReportsWindow(QWidget):
         status = "ربح" if report.is_profit else "خسارة"
         self.status_label.setText(
             f"قائمة الدخل من {report.start_date.strftime('%Y-%m-%d')} إلى "
-            f"{report.end_date.strftime('%Y-%m-%d')} — {status} "
+            f"{report.end_date.strftime('%Y-%m-%d')} - {status} "
             f"(إيرادات: {report.total_revenue:,.2f} | مصروفات: {report.total_expense:,.2f} | "
             f"صافي: {report.net_income:,.2f})"
         )
@@ -530,10 +530,10 @@ class ReportsWindow(QWidget):
                 self.results_table.setItem(i, 0, QTableWidgetItem(line.date.strftime("%Y-%m-%d")))
                 self.results_table.setItem(i, 1, QTableWidgetItem(line.entry_no))
                 self.results_table.setItem(i, 2, QTableWidgetItem(line.description))
-                dr_item = QTableWidgetItem(f"{line.debit:,.2f}" if line.debit > 0 else "—")
+                dr_item = QTableWidgetItem(f"{line.debit:,.2f}" if line.debit > 0 else "-")
                 dr_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
                 self.results_table.setItem(i, 3, dr_item)
-                cr_item = QTableWidgetItem(f"{line.credit:,.2f}" if line.credit > 0 else "—")
+                cr_item = QTableWidgetItem(f"{line.credit:,.2f}" if line.credit > 0 else "-")
                 cr_item.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
                 self.results_table.setItem(i, 4, cr_item)
                 bal_item = QTableWidgetItem(f"{line.balance:,.2f}")

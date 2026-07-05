@@ -1,5 +1,5 @@
 """
-Dashboard Page — لوحة المعلومات الحقيقية بـ Soft UI
+Dashboard Page - لوحة المعلومات الحقيقية بـ Soft UI
 
 KPI Cards + Recent Activity + Quick Stats
 """
@@ -166,7 +166,7 @@ class DashboardPage(QWidget):
         self._kpi_sales = KPICard(
             label="مبيعات اليوم",
             value="0.00",
-            change="—",
+            change="-",
             accent_color=SoftColors.ACCENT_GREEN,
             parent=self,
         )
@@ -175,7 +175,7 @@ class DashboardPage(QWidget):
         self._kpi_purchases = KPICard(
             label="مشتريات اليوم",
             value="0.00",
-            change="—",
+            change="-",
             accent_color=SoftColors.ACCENT_ORANGE,
             parent=self,
         )
@@ -184,7 +184,7 @@ class DashboardPage(QWidget):
         self._kpi_cash = KPICard(
             label="رصيد الصندوق",
             value="0.00",
-            change="—",
+            change="-",
             accent_color=SoftColors.ACCENT_BLUE,
             parent=self,
         )
@@ -193,7 +193,7 @@ class DashboardPage(QWidget):
         self._kpi_customers = KPICard(
             label="عملاء نشطون",
             value="0",
-            change="—",
+            change="-",
             accent_color=SoftColors.ACCENT_PURPLE,
             parent=self,
         )

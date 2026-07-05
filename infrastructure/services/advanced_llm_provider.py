@@ -1,5 +1,5 @@
 """
-Advanced LLM Provider — موفّر LLM متقدم
+Advanced LLM Provider - موفّر LLM متقدم
 
 يدعم:
 - OpenAI GPT-4o مع streaming
@@ -53,7 +53,7 @@ class AdvancedOpenAIProvider(LLMProvider):
         fallback_provider: provider بديل عند الفشل.
     """
 
-    # Pricing per 1K tokens (USD) — updated 2026
+    # Pricing per 1K tokens (USD) - updated 2026
     PRICING = {
         "gpt-4o-mini": {"input": 0.00015, "output": 0.0006},
         "gpt-4o": {"input": 0.0025, "output": 0.01},

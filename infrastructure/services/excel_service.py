@@ -1,5 +1,5 @@
 """
-Excel Import/Export Service — خدمة استيراد وتصدير Excel
+Excel Import/Export Service - خدمة استيراد وتصدير Excel
 
 Features:
 - Export: customers, suppliers, products, invoices, reports

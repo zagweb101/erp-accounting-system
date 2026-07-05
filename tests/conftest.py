@@ -51,7 +51,7 @@ def isolated_test_db(tmp_path, monkeypatch):
         seed_admin_user()
         seed_chart_of_accounts()
     except Exception as e:
-        # Some tests (value_objects) don't need DB — ignore errors
+        # Some tests (value_objects) don't need DB - ignore errors
         pass
 
     yield

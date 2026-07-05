@@ -482,7 +482,7 @@ class TestInventoryUseCases:
         # Should return at least 1 product (our new one)
         assert len(low_products) >= 1
         # Each item is (product, balance) tuple
-        # Product may be ProductModel or Product entity — check name attribute
+        # Product may be ProductModel or Product entity - check name attribute
         for item in low_products:
             product = item[0] if isinstance(item, tuple) else item
             assert hasattr(product, "name")

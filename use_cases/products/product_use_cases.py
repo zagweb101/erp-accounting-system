@@ -218,7 +218,7 @@ class ListInventoryEntriesUseCase:
 
 
 class GetLowStockProductsUseCase:
-    """المنتجات تحت الحد الأدنى — للتنبيهات."""
+    """المنتجات تحت الحد الأدنى - للتنبيهات."""
 
     def __init__(self, inventory_repo: IInventoryRepository) -> None:
         self._repo = inventory_repo
@@ -230,7 +230,7 @@ class GetLowStockProductsUseCase:
 
 
 class AdjustInventoryUseCase:
-    """تسوية مخزون (يدوي — لجرد أو تالف)."""
+    """تسوية مخزون (يدوي - لجرد أو تالف)."""
 
     def __init__(
         self,

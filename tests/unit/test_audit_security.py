@@ -1,5 +1,5 @@
 """
-اختبارات System Audit — اختبارات الأمان والـ Audit Log
+اختبارات System Audit - اختبارات الأمان والـ Audit Log
 """
 from __future__ import annotations
 
@@ -103,14 +103,14 @@ class TestAuditService:
     def test_audit_does_not_fail_operation_on_error(self) -> None:
         """سجل النشاط لا يجب أن يوقف العملية التجارية عند فشله."""
         service = AuditService()
-        # Pass invalid user_id type — should not raise
+        # Pass invalid user_id type - should not raise
         result = service.record(
             user_id=None,
             username=None,
             action="TEST_NO_FAIL",
             description="This should not raise even with None values",
         )
-        # Either succeeds or returns None — but doesn't raise
+        # Either succeeds or returns None - but doesn't raise
         assert result is None or result.action == "TEST_NO_FAIL"
 
 

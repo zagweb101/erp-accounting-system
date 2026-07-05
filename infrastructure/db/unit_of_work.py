@@ -1,5 +1,5 @@
 """
-Unit of Work Pattern — حل مشكلة Atomicity
+Unit of Work Pattern - حل مشكلة Atomicity
 
 يضمن أن كل Use Case معقد (مثل إنشاء فاتورة) يُنفّذ في معاملة واحدة
 (single database transaction). لو فشلت أي خطوة، تُلغى كل التغييرات.
@@ -14,7 +14,7 @@ from sqlalchemy.orm import Session, sessionmaker
 
 
 class UnitOfWork:
-    """Unit of Work — يُدير معاملة واحدة قابلة للـ rollback.
+    """Unit of Work - يُدير معاملة واحدة قابلة للـ rollback.
 
     Usage:
         async with UnitOfWork() as uow:
@@ -43,10 +43,10 @@ class UnitOfWork:
             return
         try:
             if exc_type is not None:
-                # Exception occurred — rollback
+                # Exception occurred - rollback
                 self._session.rollback()
             else:
-                # Success — commit
+                # Success - commit
                 self._session.commit()
         finally:
             self._session.close()

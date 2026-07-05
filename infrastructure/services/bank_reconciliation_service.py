@@ -1,5 +1,5 @@
 """
-Bank Reconciliation Service — خدمة التسوية البنكية
+Bank Reconciliation Service - خدمة التسوية البنكية
 
 تطابق بين كشوف الحسابات البنكية والمعاملات المسجلة في النظام.
 Skeleton جاهز للتكامل مع API البنوك السعودية في v3.0+.
@@ -123,7 +123,7 @@ class BankReconciliationService:
                         payment["matched"] = True
                         return payment
                 else:
-                    # No date — match on amount only
+                    # No date - match on amount only
                     payment["matched"] = True
                     return payment
 
@@ -157,9 +157,9 @@ class BankReconciliationService:
     def generate_reconciliation_report(self, result: ReconciliationResult) -> str:
         """توليد تقرير التسوية كنص."""
         report = [
-            "═══════════════════════════════════════",
+            "=======================================",
             "       تقرير التسوية البنكية",
-            "═══════════════════════════════════════",
+            "=======================================",
             f"التاريخ: {result.reconciliation_date.strftime('%Y-%m-%d %H:%M')}",
             "",
             f"✅ معاملات مطابقة: {len(result.matched_transactions)}",
@@ -183,5 +183,5 @@ class BankReconciliationService:
             for p in result.unmatched_system[:10]:
                 report.append(f"  {p.get('date', '?')} | {p.get('amount', 0):>10,.2f} | {p.get('invoice_no', '?')}")
 
-        report.append("═══════════════════════════════════════")
+        report.append("=======================================")
         return "\n".join(report)
