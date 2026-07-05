@@ -539,14 +539,8 @@ class MainWindow(QMainWindow):
         self.setStatusBar(status)
 
     def _apply_theme(self) -> None:
-        """تطبيق ثيم QDarkTheme إن وُجد، وإلا الثيم الافتراضي."""
-        if qdarktheme:
-            try:
-                qdarktheme.setup_theme("light")
-            except Exception as e:
-                # Silent fail - UI initialization should not crash
-                # In production: use logger.warning(f"UI init error: {e}")
-                pass
+        """تطبيق الثيم - Soft UI theme already applied globally."""
+        pass
 
     def _on_sidebar_click(self, section: str) -> None:
         """معالجة نقر زر الشريط الجانبي."""
