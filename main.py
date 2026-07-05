@@ -90,8 +90,8 @@ def run_app() -> int:
         from infrastructure.ui.theme.soft_ui import SoftUITheme
         SoftUITheme.apply(app)
         logger.info("Soft UI theme applied")
-    except ImportError:
-        logger.info("Soft UI theme not available, using default")
+    except Exception as e:
+        logger.info(f"Soft UI theme not available: {e}, using default")
 
     # Wire up dependencies (manual DI — could use a container later)
     user_repo = SqlAlchemyUserRepository()

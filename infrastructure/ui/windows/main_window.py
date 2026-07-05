@@ -17,7 +17,7 @@ from PySide6.QtWidgets import (
 
 try:
     import qtawesome as qta
-except ImportError:
+except Exception:
     qta = None
 
 from domain.entities.user import User
