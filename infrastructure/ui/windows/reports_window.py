@@ -376,7 +376,7 @@ class ReportsWindow(QWidget):
     def _add_section_header(self, row: int, title: str, color: str) -> None:
         item = QTableWidgetItem(title)
         item.setBackground(Qt.GlobalColor.darkBlue)
-        item.setForeground(Qt.GlobalColor.#FFFFFF)
+        item.setForeground(Qt.GlobalColor.white)
         font = item.font()
         font.setBold(True)
         font.setPointSize(12)
