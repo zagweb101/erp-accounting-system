@@ -203,7 +203,6 @@ class LoginWindow(QMainWindow):
 
         # Remember me + forgot password
         options_layout = QHBoxLayout()
-        options_layout.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
 
         self.remember_checkbox = QCheckBox("تذكرني")
         self.remember_checkbox.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
